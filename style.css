@@ -1,0 +1,829 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000000fb;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(
+    88deg,
+    rgba(0, 22, 28, 1) 34%,
+    rgba(8, 0, 0, 0.91) 61%,
+    rgba(48, 48, 48, 0.92) 76%,
+    rgba(58, 88, 94, 1) 80%,
+    rgba(0, 101, 140, 0.89) 100%
+  );
+  color: #fff;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-left .logo {
+  height: 60px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  color: #00cfd2;
+}
+
+
+
+#hero {
+  background: url('img/img1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  position: relative;
+}
+
+.hero-container {
+  max-width: 600px;
+  background: linear-gradient(180deg, rgba(0, 30, 36, 0.8) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 160, 204, 0.6) 100%);
+  padding: 80px 60px;
+  border-radius: 40px;
+  color: white;
+  margin-left: 70px;
+  align-items: center;
+    text-align: center;
+}
+
+.hero-card h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+
+}
+
+.hero-card p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #eee;
+
+}
+
+
+.sobre-texto .azul {
+  color: #00A0CC;
+  font-weight: 500;
+}
+
+.onde-texto .azul {
+  color: #00A0CC;
+}
+
+
+.cards {
+  background: #141414;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cards-title {
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.cards-title .azul {
+  color: #65e1dc;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 300px;
+  text-align: center;
+}
+
+.card .icon {
+  width: 60px;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.card .icon {
+  width: 150px;
+  margin-bottom: 25px;
+  filter: brightness(0) saturate(100%) invert(81%) sepia(19%) saturate(1942%) hue-rotate(134deg) brightness(102%) contrast(101%);
+}
+
+.sobre {
+  position: relative;
+  color: white;
+  padding: 100px 40px;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 400px; /* Garantir altura mínima para não cortar */
+}
+
+.sobre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/img2.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.55;
+  mix-blend-mode: multiply; /* ou overlay, screen, darken, etc */
+  z-index: -1;
+}
+
+.sobre::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2000px;
+  height: 1000px;
+  background: radial-gradient(circle at center, rgba(0, 255, 200, 0.315) 0%, transparent 70%);
+  mix-blend-mode: screen; /* ou lighten */
+  z-index: 0;
+  pointer-events: none;
+  margin-top: 20px; /* Ajuste para posicionar o gradiente */
+  margin-right: -1550px; /* Ajuste para posicionar o gradiente */
+}
+
+
+
+.sobre-container {
+  position: relative;
+  z-index: 1;
+  padding: 80px 20px; /* ou ajuste como necessário */
+}
+
+
+
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.sobre-texto p {
+  font-size: 1.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.sobre-texto .azul {
+  color: #00A0CC;
+  font-weight: 500;
+}
+
+
+
+.footer-sucesso {
+  background: linear-gradient(180deg, #00161c 0%, #000000 60%, #02181d 100%);
+  color: white;
+  padding: 100px 40px 60px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.footer-content h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.footer-content .azul {
+  color: #65e1dc;
+  font-weight: 600;
+}
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  flex: 1;
+  max-width: 800px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a img {
+  width: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.btn-principal {
+  padding: 12px 30px;
+  background-color: #65e1dc;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-principal:hover {
+  transform: scale(1.07);
+  background-color: #4ad2cc;
+}
+
+.btn-grande {
+  font-size: 1.8rem;
+  padding: 25px 30px;
+  border-radius: 40px;
+}
+
+.azul {
+  color: #65e1dc !important;
+}
+
+/* Seção "Onde estamos?" */
+.onde-estamos {
+  background: #000000;
+  padding: 100px 40px;
+  color: white;
+}
+
+/* Container principal */
+.onde-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-right: 2px;
+  flex-wrap: wrap;
+}
+
+/* Imagem do globo */
+.globo-img img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
+
+/* Bloco de texto */
+.onde-texto {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+  color: white;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+.onde-texto h2 {
+  font-size: 8rem;
+  margin-bottom: 10px;
+}
+
+.onde-texto p {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* Destaque em azul */
+.onde-texto .azul {
+  color: #00A0CC;
+}
+
+/* Botões de localização */
+.botoes-globo {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.botoes-globo .btn-principal {
+  font-size: 15px;
+  padding: 10px 25px;
+}
+
+/* Container do globo 3D */
+.globo-card {
+  width: 100%;                       /* Ocupa toda a largura do elemento pai */
+  max-width: 600px;           /* Limita a largura a no máximo 600px */
+  height: 600px;                   /* Altura fixa de 600px */
+  position: relative;                 /* Necessária para posicionar o ::after sobre ele */
+  background-color: transparent;      /* Fundo completamente transparente */
+  border-radius: 999px;               /* Borda totalmente arredondada (efeito circular) */
+  overflow: hidden;                   /* Corta tudo que sair dos limites (ex: ::after ou conteúdo extra) */
+  display: flex;                      /* Torna o conteúdo interno um flex container */
+  align-items: center;                /* Alinha verticalmente o conteúdo no centro */
+  justify-content: center;           /* Alinha horizontalmente o conteúdo no centro */
+  transition: border-radius 0.3s ease; /* Suaviza a transição quando mudar a borda */
+}
+
+
+/* Remove fade e borda arredondada */
+.globo-card.sem-fade {
+  border-radius: 0;
+}
+
+
+.globo-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 60%,      /* centro transparente */
+    rgb(0, 0, 0) 10%,     /* transição escura */
+    rgba(0, 0, 0, 1) 80%       /* borda totalmente preta */
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+/* Remove o fade quando essa classe for aplicada */
+.globo-card.sem-fade::after {
+  display: none;
+}
+
+
+/* Responsivo */
+@media (max-width: 960px) {
+  .onde-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .globo-card {
+    margin-top: 30px;
+  }
+}
+
+.maps-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+.fechar-mapa {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #ff3333;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 11;
+  border-radius: 4px;
+}
+
+.transicao-degrade {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1ab2 100%);
+}
+
+
+.transicao-degrade2 {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, #00000070 0%, #141414 100%);
+}
+.espaco-section {
+  background-color: #141414;
+  color: white;
+  padding: 100px 40px;
+}
+
+.espaco-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.espaco-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.espaco-texto h2 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.espaco-texto h2 span {
+  color: #00d4d4;
+}
+
+.espaco-texto p {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* 🔧 Corrigido: container com altura fixa e sombra controlada */
+.espaco-imagem {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 212, 212, 0.15);
+}
+
+/* 🔧 Corrigido: imagens alternadas ajustadas 100% */
+.img-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Força a imagem a caber exatamente no container */
+  object-fit: cover;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  z-index: 0;
+}
+
+.img-fade.ativo {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+/* === Menu MOBILE === */
+
+/* Esconde o menu mobile no desktop e mostra no mobile */
+.header-mobile {
+  display: none;
+}
+
+.menu-mobile-icon {
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos do menu mobile */
+.nav-mobile {
+  display: none;
+  background:  #000000;
+  padding: 20px;
+}
+
+.nav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-mobile ul li {
+  margin: 15px 0;
+}
+
+.nav-mobile ul li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-mobile ul li a:hover {
+  color: #00cfd2;
+}
+
+/* === Alternância entre desktop e mobile === */
+@media (max-width: 768px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background: #000; /* Cor sólida simples no lugar do gradiente */
+  }
+}
+
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 20px;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-container {
+    margin-left: 0;
+    padding: 40px 20px;
+    border-radius: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-card h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .hero-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-principal {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 90%;
+    padding: 30px 20px;
+    background-color: #1c1c1c;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    height: auto; /* deixa o card crescer conforme o conteúdo */
+    min-height: 300px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .card .icon {
+    width: 80px;
+    margin-bottom: 20px;
+  }
+
+  .cards-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .sobre-texto {
+    max-width: 100%;
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .sobre {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .sobre::before {
+    background-position: center;
+    background-size: cover;
+    opacity: 0.35;
+  }
+
+  .sobre::after {
+    display: none; /* tira o gradiente extra que pode atrapalhar */
+  }
+  
+}
+@media (max-width: 768px) {
+
+  .transicao-degrade2 {
+    height: 8px;
+    background: linear-gradient(to bottom, #0a0a0a 10%, #000000 100%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .onde-container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px;
+  }
+
+  .onde-texto {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .onde-texto h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1px;
+  }
+
+  .onde-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .globo-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .botoes-globo {
+
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-sucesso {
+    padding: 60px 20px 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .footer-content h2 {
+    font-size: 2.4rem;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .btn-grande {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-radius: 30px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-social img {
+    width: 32px;
+  }
+}

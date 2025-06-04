@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VV Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="https://unpkg.com/three-spritetext"></script>
+
+</head>
+<body>
+
+<header>
+
+  <!-- Header Desktop -->
+  <div class="header-desktop">
+    <div class="header-container">
+      <div class="header-left">
+        <img src="img/logo.png" alt="VV Group Logo" class="logo" />
+      </div>
+
+      <div class="header-right">
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#servicos">SERVIÇOS</a></li>
+            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="#nosso-espaco">NOSSO ESPAÇO</a></li>
+          </ul>
+        </nav>
+        <a href="https://wa.me/351912345678" target="_blank" class="btn-principal">QUERO COMEÇAR</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Mobile -->
+  <div class="header-mobile">
+    <div class="header-container">
+      <div class="header-left">
+        <img src="img/logo.png" alt="VV Group Logo" class="logo" />
+      </div>
+
+      <div class="menu-mobile-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="#hero" onclick="toggleMenu()">HOME</a></li>
+        <li><a href="#servicos" onclick="toggleMenu()">SERVIÇOS</a></li>
+        <li><a href="#sobre" onclick="toggleMenu()">SOBRE</a></li>
+        <li><a href="#nosso-espaco" onclick="toggleMenu()">NOSSO ESPAÇO</a></li>
+        <li><a href="https://wa.me/351912345678" target="_blank" class="btn-principal">QUERO COMEÇAR</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+
+
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-card">
+      <h1>
+        Decisões de <span class="azul">alto<br>impacto</span> exigem<br>
+        uma assessoria<br><span class="azul">à altura.</span>
+      </h1>
+      <p>Contacte nossos especialistas.</p>
+      <a href="https://wa.me/351912345678" target="_blank" class="btn-principal">QUERO COMEÇAR</a>
+
+    </div>
+  </div>
+</section>
+
+<div class="transicao-degrade"></div>
+
+
+
+<section id="servicos" class="cards">
+  <h2 class="cards-title">
+    Como vamos <br><span class="azul">mudar o teu jogo?</span>
+  </h2>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="img/alvo.png" alt="Ícone Diagnóstico" class="icon" />
+      <h3>Diagnóstico<br>Preciso</h3>
+      <p>
+        Analisamos o seu negócio a fundo<br class="mobile-break">
+        e identificamos onde está a travar.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="img/rei.png" alt="Ícone Estratégia" class="icon" />
+      <h3>Estratégia<br>à medida</h3>
+      <p>
+        Desenhamos um plano claro,<br class="mobile-break">
+        alinhado aos seus objectivos<br class="mobile-break">
+        e ao mercado.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="img/engrenagem.png" alt="Ícone Execução" class="icon" />
+      <h3>Execução<br>com impacto</h3>
+      <p>
+        Implementamos acções focadas<br class="mobile-break">
+        em resultados reais<br class="mobile-break">
+        e sustentáveis.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<div class="transicao-degrade2"></div>
+
+<section id="sobre" class="sobre">
+  <div class="sobre-container">
+    <div class="sobre-texto">
+      <h2>Quem<br>somos?</h2>
+      <p>
+        Na VV Group, <span class="azul">transformamos <br>experiência em crescimento.</span>
+      </p>
+<p>
+  Com anos de actuação no terreno,<br>
+  aliamos conhecimento estratégico à prática real<br>
+  em empreendimentos e expansão empresarial.
+</p>
+
+<p>
+  Ajudamos líderes a tomar decisões<br>
+  certas, escalar com solidez e conquistar<br>
+  novos mercados com segurança.
+</p>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="transicao-degrade2"></div>
+
+<section id="contacto" class="onde-estamos">
+  <div class="onde-container">
+
+    <!-- Globo à esquerda -->
+    <div class="globo-card">
+      <div id="globo-container"></div>
+
+      <!-- Mapa por cima do globo -->
+      <div id="maps-overlay" class="maps-embed" style="display: none;">
+        <button class="fechar-mapa" onclick="fecharMapa()">✖</button>
+        <iframe
+          id="maps-frame"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Texto à direita -->
+    <div class="onde-texto">
+      <h2 class="azul">Onde<br>estamos?</h2>
+      <p>Veja onde estamos a atuar<br>ao redor do mundo.</p>
+
+      <div class="botoes-globo">
+        <button onclick="irPara('🇺🇸 EUA - Menlo Park')" class="btn-principal">🇺🇸 EUA</button>
+        <button onclick="irPara('🇵🇹 Portugal - Guimarães')" class="btn-principal">🇵🇹 Portugal</button>
+        <button onclick="irPara('🇦🇪 Dubai - EAU')" class="btn-principal">🇦🇪 Emirados</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="transicao-degrade"></div>
+
+<section id="nosso-espaco" class="espaco-section">
+  <div class="espaco-container">
+    <div class="espaco-texto">
+      <h2><span>Nosso espaço</span><br>presencial</h2>
+      <p>Contamos com uma estrutura moderna,<br> pronta para receber clientes e parceiros <br> em momentos estratégicos. <br>  
+        <br>Aqui, ideias  ganham forma, decisões <br>se tornam  sólidas e o crescimento <br>acontece ao vivo.</p>
+    </div>
+
+<div class="espaco-imagem">
+  <img src="img/img1.png" class="img-fade ativo" alt="Espaço 1">
+  <img src="img/img2.png" class="img-fade" alt="Espaço 2">
+  <img src="img/img1.png" class="img-fade" alt="Espaço 3">
+  <img src="img/img2.png" class="img-fade" alt="Espaço 4">
+  <img src="img/img1.png" class="img-fade" alt="Espaço 5">
+</div>
+
+  </div>
+</section>
+
+
+<div class="transicao-degrade2"></div>
+
+
+<footer class="footer-sucesso">
+  <div class="footer-content">
+    <h2>É hora de virar a<br><span class="azul">chave do sucesso.</span></h2>
+  <a href="https://wa.me/351912345678" target="_blank" class="btn-principal btn-grande">QUERO COMEÇAR</a>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      Todos direitos reservados &copy; 2025 VV Group. <br>
+    </p>
+    <div class="footer-social">
+      <a href="#"><img src="img\icon-face.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/vvgroup_business?igsh=aGhpZ2IwNG1nMGFq"><img src="img\icon-insta.png" alt="Instagram" /></a>
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Bibliotecas necessárias -->
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+<script src="https://unpkg.com/three-spritetext"></script>
+
+<!-- Seu script personalizado -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
