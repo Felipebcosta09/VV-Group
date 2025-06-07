@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VV Group</title>
-  <link rel="stylesheet" href="style.css" />
+
   <script src="https://unpkg.com/three"></script>
   <script src="https://unpkg.com/globe.gl"></script>
   <script src="https://unpkg.com/three-spritetext"></script>
+<link rel="stylesheet" href="almarena/stylesheet.css" />
+<link rel="stylesheet" href="style.css" />
+
 
 </head>
 <body>
@@ -143,7 +146,7 @@
   </div>
 </section>
 
-<div class="transicao-degrade2"></div>
+
 
 <section id="contacto" class="onde-estamos">
   <div class="onde-container">
@@ -203,8 +206,31 @@
   </div>
 </section>
 
-
 <div class="transicao-degrade2"></div>
+
+
+<section id="nosso-grupo" class="grupo-section">
+  <h2 class="grupo-title">Nosso Grupo</h2>
+
+  <div class="grupo-wrapper">
+    <button class="seta esquerda" onclick="trocarLogo(-1)">&#10094;</button>
+
+    <div class="grupo-carrossel" id="grupoCarrossel">
+      <a href="https://vvstudios.netlify.app/" target="_blank">
+        <img src="img/logo-vvstudios.png" alt="Marca 1" class="logo-item ativo">
+      </a>
+      <a href="https://vvstudios.netlify.app/" target="_blank">
+        <img src="img/logo-vvstudios.png" alt="Marca 2" class="logo-item">
+      </a>
+      <a href="https://vvstudios.netlify.app/" target="_blank">
+        <img src="img/logo-vvstudios.png" alt="Marca 3" class="logo-item">
+      </a>
+    </div>
+      <button class="seta direita" onclick="trocarLogo(1)">&#10095;</button>
+  </div>
+</section>
+
+
 
 
 <footer class="footer-sucesso">

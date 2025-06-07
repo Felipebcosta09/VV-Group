@@ -127,3 +127,15 @@ function toggleMenu() {
   const nav = document.getElementById('navMobile');
   nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
 }
+
+
+let logoAtual = 0;
+
+function trocarLogo(direcao) {
+  const logos = document.querySelectorAll(".logo-item");
+  
+  logos[logoAtual].classList.remove("ativo");
+  logoAtual = (logoAtual + direcao + logos.length) % logos.length;
+  logos[logoAtual].classList.add("ativo");
+}
+
